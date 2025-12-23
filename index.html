@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сервис услуг РФ</title>
-    <meta name="keywords" content="услуги, сервис, исполнители, помощь, транспорт, уборка, здоровье, красота, документы, контакты">
+    <title>Service Platform RF</title>
+    <meta name="keywords" content="services, platform, executors, help, transport, cleaning, health, beauty, documents, contacts">
     <link rel="icon" href="assets/favicon-sy.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,24 @@
         .contact-section {
             background-color: #1e293b;
         }
+        .lang-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 2px solid #14b8a6;
+            background: white;
+            color: #14b8a6;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .lang-btn:hover {
+            background: #14b8a6;
+            color: white;
+        }
+        .lang-btn.active {
+            background: #14b8a6;
+            color: white;
+        }
     </style>
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -65,17 +83,21 @@
     <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-['Pacifico'] text-teal-500">Сервис Услуг.РФ</a>
-                
-                <!-- Десктопное меню -->
+                <a href="#" class="text-2xl font-['Pacifico'] text-teal-500" data-i18n="siteName">Service Platform.RF</a>
+
+                <!-- Language Switcher -->
+                <div class="hidden md:flex items-center space-x-2 mr-4">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+
+                <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">О компании</a>
-                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Услуги</a>
-                    <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors">Для исполнителя</a>
-                    <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors">Контакты и документы</a>
-                    <!-- Кнопка "Войти" -->
-                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" class="ml-4 bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition duration-300 text-center cursor-pointer">Войти</a>
-                </nav>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="aboutMenu">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="servicesMenu">Services</a>
+                    <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="executorMenu">For Executor</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="contactsMenu">Contacts & Documents</a>
+                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" class="ml-4 bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition duration-300 text-center cursor-pointer" data-i18n="loginBtn">Login</a>
                 </nav>
                 
                 <!-- Мобильное меню -->
@@ -86,56 +108,60 @@
                 </div>
             </div>
             
-            <!-- Мобильное меню (скрыто по умолчанию) -->
+            <!-- Mobile Menu (hidden by default) -->
             <div id="mobile-menu" class="hidden md:hidden py-4 border-t mt-3">
+                <!-- Language Switcher for Mobile -->
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
                 <nav class="flex flex-col space-y-4">
-                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">О компании</a>
-                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Услуги</a>
-                    <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors">Для исполнителя</a>
-                    <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors">Контакты и документы</a>
-                    <!-- Кнопка "Войти" для мобильного -->
-                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" class="bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition duration-300 text-center cursor-pointer">Войти</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="aboutMenu">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="servicesMenu">Services</a>
+                    <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="executorMenu">For Executor</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors" data-i18n="contactsMenu">Contacts & Documents</a>
+                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" class="bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition duration-300 text-center cursor-pointer" data-i18n="loginBtn">Login</a>
                 </nav>
             </div>
         </div>
     </header>
     <main class="pt-16">
-        <!-- Блок 1: О компании -->
+        <!-- Section 1: About Company -->
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">О компании</h2>
-                
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-i18n="aboutTitle">About Company</h2>
+
                 <div class="flex flex-col md:flex-row items-center gap-10">
                     <div class="w-full md:w-2/5">
-                        <img src="assets/Логотип СУ.jpg" 
-                             alt="О компании" 
+                        <img src="assets/Логотип СУ.jpg"
+                             alt="About Company"
                              class="rounded-lg shadow-lg w-full h-auto object-cover">
                     </div>
-                    
+
                     <div class="w-full md:w-3/5">
-                        <h3 class="text-2xl font-semibold mb-4">Описание сервиса</h3>
-                        <p class="text-gray-700 mb-6">
-                            "Сервис услуг РФ" – ваш помощник в решении повседневных дел! Найдите исполнителя легко и быстро, а исполнители могут начать работать с нами. Подключайтесь через наш Telegram-бот, а так же через личный кабинет и получите помощь уже сегодня!</p>
+                        <h3 class="text-2xl font-semibold mb-4" data-i18n="aboutSubtitle">Service Description</h3>
+                        <p class="text-gray-700 mb-6" data-i18n="aboutDescription">
+                            "Service Platform RF" is your assistant in solving everyday tasks! Find an executor easily and quickly, and executors can start working with us. Connect through our Telegram bot or personal account and get help today!</p>
 
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                            
+
                             <div class="text-center">
                                 <p class="text-3xl font-bold text-teal-500">500+</p>
-                                <p class="text-gray-600">клиентов</p>
+                                <p class="text-gray-600" data-i18n="clientsCount">clients</p>
                             </div>
-                            
+
                             <div class="text-center">
                                 <p class="text-3xl font-bold text-teal-500">98%</p>
-                                <p class="text-gray-600">довольных клиентов</p>
+                                <p class="text-gray-600" data-i18n="satisfiedClients">satisfied clients</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex flex-col items-center gap-4">
-                        <a href="https://t.me/esu_client_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center">
-                            Перейти в Telegram-бот
+                        <a href="https://t.me/esu_client_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center" data-i18n="telegramBotBtn">
+                            Go to Telegram Bot
                         </a>
-                        <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center">
-                            Перейти в личный кабинет
+                        <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center" data-i18n="personalAccountBtn">
+                            Go to Personal Account
                         </a>
                         </div>
                     </div>
@@ -143,178 +169,151 @@
             </div>
         </section>
         
-        <!-- Блок 2: Услуги -->
+        <!-- Section 2: Services -->
         <section id="services" class="py-20 services-section">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Услуги</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-i18n="servicesTitle">Services</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Услуга 1 -->
+                    <!-- Service 1 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-roadster-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Транспортные услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Грузоперевозки по городу и между городами
-                            - Пассажироперевозки
-                            - Трезвый водитель
-                            - Инструктор по вождению
-                            - Курьерская доставка
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service1Title">Transportation Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service1Desc">
+                            Freight transportation within the city and between cities<br>- Passenger transportation<br>- Sober driver<br>- Driving instructor<br>- Courier delivery
                         </p>
-                        
+
                     </div>
-                    
-                    <!-- Услуга 2 -->
+
+                    <!-- Service 2 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-tools-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Строительные и бытовые услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Вскрытие и ремонт замков
-                            - Мастер на час (универсал)
-                            - Услуги сантехника
-                            - Услуги электрика
-                            - Плиточник
-                            - Услуги ремонта бытовой техники
-                            - Скважины
-                            - Септики
-                            - Колодцы
-                            - Земляные работы
-                            - Вывоз мусора
-                            - Услуги по предоставлению различной строительной техники
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service2Title">Construction and Household Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service2Desc">
+                            Lock opening and repair<br>- Handyman (universal)<br>- Plumbing services<br>- Electrical services<br>- Tiling<br>- Appliance repair services<br>- Wells<br>- Septic systems<br>- Water wells<br>- Earthworks<br>- Garbage removal<br>- Construction equipment rental
                         </p>
                     </div>
-                    
-                    <!-- Услуга 3 -->
+
+                    <!-- Service 3 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-sofa-fill ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Уборочные и клининговые услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Генеральная уборка
-                            - Мойка окон
-                            - Уборка
-                            - Чистка ковров
-                            - Чистка мягкой мебели
-                            - Дезинфекция
-                            - Спец-уборка
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service3Title">Cleaning and Janitorial Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service3Desc">
+                            General cleaning<br>- Window washing<br>- Cleaning<br>- Carpet cleaning<br>- Upholstered furniture cleaning<br>- Disinfection<br>- Special cleaning
                         </p>
                     </div>
                     
-                    <!-- Услуга 4 -->
+                    <!-- Service 4 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-parking-fill ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Автомобильные услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Автомойка выездная
-                            - Шиномонтаж выездной
-                            - Эвакуатор
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service4Title">Automotive Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service4Desc">
+                            Mobile car wash<br>- Mobile tire service<br>- Tow truck
                         </p>
                     </div>
-                    
-                    <!-- Услуга 5 -->
+
+                    <!-- Service 5 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-open-arm-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Здоровье и красота</h3>
-                        <p class="text-gray-600 mb-6">
-                            Массаж
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service5Title">Health and Beauty</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service5Desc">
+                            Massage
                         </p>
                     </div>
-                    
-                    <!-- Услуга 6 -->
+
+                    <!-- Service 6 -->
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-file-list-2-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Социальные и личные услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Собеседник на час
-                            - Мобильный нотариус
-                            - Услуги переводчика
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service6Title">Social and Personal Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service6Desc">
+                            Companion for an hour<br>- Mobile notary<br>- Translation services
                         </p>
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-yuque-fill ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Уход за животными</h3>
-                        <p class="text-gray-600 mb-6">
-                            Уход за животными (груминг)
-                            - Выгул собак
-                            - Ветеринария
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service7Title">Pet Care</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service7Desc">
+                            Pet care (grooming)<br>- Dog walking<br>- Veterinary services
                         </p>
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-8 transition-transform hover:translate-y-[-5px]">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
                             <i class="ri-computer-fill ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-3">Компьютерные услуги</h3>
-                        <p class="text-gray-600 mb-6">
-                            Компьютерная помощь
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="service8Title">Computer Services</h3>
+                        <p class="text-gray-600 mb-6" data-i18n="service8Desc">
+                            Computer assistance
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Блок 3: Для исполнителя -->
+        <!-- Section 3: For Executor -->
         <section id="executor" class="py-20 executor-section">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Для исполнителя</h2>
-                
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-i18n="executorTitle">For Executor</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <!-- Колонка 1: Процесс -->
+                    <!-- Column 1: Process -->
                     <div class="bg-white rounded-lg shadow-md p-8">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6 mx-auto">
                             <i class="ri-flow-chart-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4 text-center">Процесс сотрудничества</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-center" data-i18n="processTitle">Cooperation Process</h3>
                         <ol class="space-y-4 text-gray-700">
                             <li class="flex">
                                 <div class="w-8 h-8 flex items-center justify-center bg-teal-500 rounded-full text-white font-bold mr-3 flex-shrink-0">1</div>
                                 <div>
-                                    <h4 class="font-medium">Регистрация</h4>
-                                    <p class="text-sm text-gray-600">Перейдите в наш Telegram-бот или личный кабинет.</p>
+                                    <h4 class="font-medium" data-i18n="step1Title">Registration</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="step1Desc">Go to our Telegram bot or personal account.</p>
                                 </div>
                             </li>
                             <li class="flex">
                                 <div class="w-8 h-8 flex items-center justify-center bg-teal-500 rounded-full text-white font-bold mr-3 flex-shrink-0">2</div>
                                 <div>
-                                    <h4 class="font-medium">Ознакомление с документами</h4>
-                                    <p class="text-sm text-gray-600">Ознакомьтесь с публичной офертой, пользовательским соглашением и политикой конфиденциальности.</p>
+                                    <h4 class="font-medium" data-i18n="step2Title">Review Documents</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="step2Desc">Familiarize yourself with the public offer, user agreement, and privacy policy.</p>
                                 </div>
                             </li>
                             <li class="flex">
                                 <div class="w-8 h-8 flex items-center justify-center bg-teal-500 rounded-full text-white font-bold mr-3 flex-shrink-0">3</div>
                                 <div>
-                                    <h4 class="font-medium">Начало работы</h4>
-                                    <p class="text-sm text-gray-600">Получите доступ к сервису и начните работу.</p>
+                                    <h4 class="font-medium" data-i18n="step3Title">Start Working</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="step3Desc">Get access to the service and start working.</p>
                                 </div>
                             </li>
                         </ol>
                     </div>
                     
-                    <!-- Колонка 2: Преимущества -->
+                    <!-- Column 2: Benefits -->
                     <div class="bg-white rounded-lg shadow-md p-8">
                         <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6 mx-auto">
                             <i class="ri-award-line ri-2x text-teal-500"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-4 text-center">Преимущества работы</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-center" data-i18n="benefitsTitle">Work Benefits</h3>
                         <div class="space-y-4 text-gray-700">
                             <div class="flex items-start">
                                 <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3 flex-shrink-0">
                                     <i class="ri-time-line text-teal-500"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">Гибкий график</h4>
-                                    <p class="text-sm text-gray-600">Возможность самостоятельно планировать рабочее время.</p>
+                                    <h4 class="font-medium" data-i18n="benefit1Title">Flexible Schedule</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="benefit1Desc">Ability to independently plan your working hours.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -322,8 +321,8 @@
                                     <i class="ri-graduation-cap-line text-teal-500"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">Получение заказов</h4>
-                                    <p class="text-sm text-gray-600">Не нужно искать клиентов, тратить время и деньги на рекламу.</p>
+                                    <h4 class="font-medium" data-i18n="benefit2Title">Receiving Orders</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="benefit2Desc">No need to search for clients, spend time and money on advertising.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -331,8 +330,8 @@
                                     <i class="ri-team-line text-teal-500"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">Служба поддержки</h4>
-                                    <p class="text-sm text-gray-600">Решение вопросов с клиентом.</p>
+                                    <h4 class="font-medium" data-i18n="benefit3Title">Support Service</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="benefit3Desc">Resolution of issues with clients.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -340,47 +339,47 @@
                                     <i class="ri-rocket-line text-teal-500"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium">Обратная связь</h4>
-                                    <p class="text-sm text-gray-600">Возможность получать отзывы и рекомендации, что поможет повысить ваш рейтинг.</p>
+                                    <h4 class="font-medium" data-i18n="benefit4Title">Feedback</h4>
+                                    <p class="text-sm text-gray-600" data-i18n="benefit4Desc">Opportunity to receive reviews and recommendations, which will help increase your rating.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 text-center flex items-center justify-center">
-                    ⚠️ <span class="ml-2 font-bold">Первые 3 месяца бесплатно, далее комиссия за выполненный заказ составляет 50 рублей и начисляется в сумме за все выполненные заказы 1 числа каждого месяца. Своевременная оплата обязательна для получения новых заказов. Неуплата приведет к приостановке предоставления заказов.</span>
+                <p class="text-sm text-gray-600 text-center flex items-center justify-center" data-i18n="feeWarning">
+                    <span class="ml-2 font-bold">⚠️ First 3 months free, then commission for completed order is 50 rubles and is charged as a sum for all completed orders on the 1st of each month. Timely payment is required to receive new orders. Non-payment will result in suspension of order provision.</span>
                 </p>
 
                 <div class="flex flex-row justify-center gap-4 mt-4">
-                    <a href="https://t.me/esu_executor_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center">
-                        Перейти в Telegram-бот
+                    <a href="https://t.me/esu_executor_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center" data-i18n="telegramBotBtn">
+                        Go to Telegram Bot
                     </a>
-                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center">
-                        Перейти в личный кабинет
+                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center" data-i18n="personalAccountBtn">
+                        Go to Personal Account
                     </a>
                 </div>
             </div>
         </section>
         
-        <!-- Блок 4: Контакты и документы -->
+        <!-- Section 4: Contacts and Documents -->
         <section id="contacts" class="py-20 contact-section text-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Контакты и документы</h2>
-                
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-i18n="contactsTitle">Contacts and Documents</h2>
+
                 <div class="flex flex-col lg:flex-row gap-10">
-                    <!-- Левая часть: Контакты -->
+                    <!-- Left part: Contacts -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8 mb-8">
-                            <h3 class="text-2xl font-semibold mb-6">Свяжитесь с нами</h3>
-                            
+                            <h3 class="text-2xl font-semibold mb-6" data-i18n="contactSubtitle">Contact Us</h3>
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3 flex-shrink-0">
                                         <i class="ri-map-pin-line text-teal-500"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium">Адрес</h4>
-                                        <p class="text-sm text-gray-600">606440, Нижегородская область, г. Бор</p>
+                                        <h4 class="font-medium" data-i18n="addressLabel">Address</h4>
+                                        <p class="text-sm text-gray-600" data-i18n="addressValue">606440, Nizhny Novgorod region, Bor</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
@@ -388,8 +387,8 @@
                                         <i class="ri-mail-line text-teal-500"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium">Email</h4>
-                                        <p class="text-sm text-gray-600">support.сервис-услуг.РФ</p>
+                                        <h4 class="font-medium" data-i18n="emailLabel">Email</h4>
+                                        <p class="text-sm text-gray-600" data-i18n="emailValue">support.service-platform.rf</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
@@ -397,52 +396,52 @@
                                         <i class="ri-time-line text-teal-500"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium">Время работы</h4>
-                                        <p class="text-sm text-gray-600">Круглосуточно</p>
+                                        <h4 class="font-medium" data-i18n="workingHoursLabel">Working Hours</h4>
+                                        <p class="text-sm text-gray-600" data-i18n="workingHoursValue">24/7</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="flex space-x-4 mb-8">
                                 <a href="https://t.me/esu_client_bot" class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
                                 <i class="ri-telegram-fill text-teal-500"></i>
                                 </a>
-                                <span class="flex items-center text-gray-600">Заказать услугу</span>
+                                <span class="flex items-center text-gray-600" data-i18n="orderServiceLabel">Order Service</span>
                             </div>
                             <div class="flex space-x-4 mb-8">
                                 <a href="https://t.me/esu_executor_bot" class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
                                 <i class="ri-telegram-fill text-teal-500"></i>
                                 </a>
-                                <span class="flex items-center text-gray-600">Получить заказ</span>
+                                <span class="flex items-center text-gray-600" data-i18n="getOrderLabel">Get Order</span>
                             </div>
 
                         </div>
                     </div>
-                    
-                    <!-- Правая часть: Документы -->
+
+                    <!-- Right part: Documents -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8">
-                            <h3 class="text-2xl font-semibold mb-6">Документы</h3>
+                            <h3 class="text-2xl font-semibold mb-6" data-i18n="documentsTitle">Documents</h3>
                             <div class="space-y-4">
                                 <div>
                                     <i class="ri-file-text-line text-teal-500"></i>
-                                    <a href="/privacy-policy.html" target="_blank" class="text-teal-500 hover:underline">Политика конфиденциальности</a>
+                                    <a href="/privacy-policy.html" target="_blank" class="text-teal-500 hover:underline" data-i18n="privacyPolicy">Privacy Policy</a>
                                 </div>
                                 <div>
                                     <i class="ri-file-text-line text-teal-500"></i>
-                                    <a href="/user-agreement.html" target="_blank" class="text-teal-500 hover:underline">Пользовательское соглашение</a>
+                                    <a href="/user-agreement.html" target="_blank" class="text-teal-500 hover:underline" data-i18n="userAgreement">User Agreement</a>
                                 </div>
                                 <div>
                                     <i class="ri-file-text-line text-teal-500"></i>
-                                     <a href="/public-offer.html" target="_blank" class="text-teal-500 hover:underline">Публичная оферта</a>
+                                     <a href="/public-offer.html" target="_blank" class="text-teal-500 hover:underline" data-i18n="publicOffer">Public Offer</a>
                                 </div>
                             </div>
-                                <h4 class="text-lg font-medium mb-4">Юридическая информация</h4>
+                                <h4 class="text-lg font-medium mb-4" data-i18n="legalInfoTitle">Legal Information</h4>
                                 <div class="text-sm text-gray-600 space-y-2">
-                                    <p>ИП Соседов Дмитрий Игоревич</p>
-                                    <p>ИНН: 524615242985</p>
-                                    <p>ОГРНИП: 321527500125360</p>
-                                    <p>Юридический адрес: 606440, Нижегородская область, г. Бор</p>
+                                    <p data-i18n="legalEntity">IP Sosedov Dmitry Igorevich</p>
+                                    <p data-i18n="innLabel">INN: 524615242985</p>
+                                    <p data-i18n="ogrnLabel">OGRNIP: 321527500125360</p>
+                                    <p data-i18n="legalAddress">Legal address: 606440, Nizhny Novgorod region, Bor</p>
                                 </div>
                             </div>
                         </div>
@@ -456,22 +455,22 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-['Pacifico'] text-white">Сервис Услуг.РФ</a>
-                    <p class="mt-2 text-gray-400">Ваш надежный помощник в решении домашних дел!</p>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white" data-i18n="siteName">Service Platform.RF</a>
+                    <p class="mt-2 text-gray-400" data-i18n="footerTagline">Your reliable assistant in solving household tasks!</p>
                 </div>
-                
+
                 <div class="flex space-x-1">
-                    <a href="#about" class="text-gray-400 hover:text-white transition-colors">О компании</a>
-                    <a href="#services" class="text-gray-400 hover:text-white transition-colors">Услуги</a>
-                    <a href="#executor" class="text-gray-400 hover:text-white transition-colors">Для исполнителя</a>
-                    <a href="#contacts" class="text-gray-400 hover:text-white transition-colors">Контакты</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="aboutMenu">About</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="servicesMenu">Services</a>
+                    <a href="#executor" class="text-gray-400 hover:text-white transition-colors" data-i18n="executorMenu">For Executor</a>
+                    <a href="#contacts" class="text-gray-400 hover:text-white transition-colors" data-i18n="contactsMenu">Contacts</a>
                 </div>
             </div>
-            
+
             <hr class="border-gray-800 my-8">
-            
+
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 ИП Соседов Дмитрий Игоревич. Все права защищены.</p>
+                <p class="text-gray-400 text-sm mb-4 md:mb-0" data-i18n="footerCopyright">© 2025 IP Sosedov Dmitry Igorevich. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -484,7 +483,7 @@
             menuToggle.addEventListener('click', function() {
                 mobileMenu.classList.toggle('hidden');
                 
-                // Изменение иконки
+                // Change icon
                 const icon = menuToggle.querySelector('i');
                 if (mobileMenu.classList.contains('hidden')) {
                     icon.classList.remove('ri-close-line');
@@ -496,7 +495,7 @@
             });
         });
     </script>
-    
+
     <script id="smoothScroll">
         document.addEventListener('DOMContentLoaded', function() {
             const links = document.querySelectorAll('a[href^="#"]');
@@ -507,16 +506,16 @@
                     
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
+
                     if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80; // Учитываем высоту навигации
-                        
+                        const offsetTop = targetElement.offsetTop - 80; // Account for navigation height
+
                         window.scrollTo({
                             top: offsetTop,
                             behavior: 'smooth'
                         });
-                        
-                        // Закрываем мобильное меню при клике на ссылку
+
+                        // Close mobile menu on link click
                         const mobileMenu = document.getElementById('mobile-menu');
                         if (!mobileMenu.classList.contains('hidden')) {
                             document.getElementById('menu-toggle').click();
@@ -526,5 +525,8 @@
             });
         });
     </script>
+
+    <!-- Translations Script -->
+    <script src="js/translations.js"></script>
 </body>
 </html>
