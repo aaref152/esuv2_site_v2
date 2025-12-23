@@ -2,7 +2,7 @@
 const translations = {
     en: {
         // Header
-        siteName: "Service Platform.RF",
+        siteName: "Adambis.com",
         aboutMenu: "About",
         servicesMenu: "Services",
         executorMenu: "For Executor",
@@ -12,7 +12,7 @@ const translations = {
         // About Section
         aboutTitle: "About Company",
         aboutSubtitle: "Service Description",
-        aboutDescription: '"Service Platform RF" is your assistant in solving everyday tasks! Find an executor easily and quickly, and executors can start working with us. Connect through our Telegram bot or personal account and get help today!',
+        aboutDescription: '"Service Platform RF" is your assistant in solving everyday tasks! Find an executor easily and quickly, and executors can start working with us. Connect through our personal account and get help today!',
         clientsCount: "clients",
         satisfiedClients: "satisfied clients",
         telegramBotBtn: "Go to Telegram Bot",
@@ -57,7 +57,7 @@ const translations = {
         executorTitle: "For Executor",
         processTitle: "Cooperation Process",
         step1Title: "Registration",
-        step1Desc: "Go to our Telegram bot or personal account.",
+        step1Desc: "Go to our personal account.",
         step2Title: "Review Documents",
         step2Desc: "Familiarize yourself with the public offer, user agreement, and privacy policy.",
         step3Title: "Start Working",
@@ -79,7 +79,7 @@ const translations = {
         contactsTitle: "Contacts and Documents",
         contactSubtitle: "Contact Us",
         addressLabel: "Address",
-        addressValue: "606440, Nizhny Novgorod region, Bor",
+        addressValue: "Office 405, Business Bay, Dubai, UAE",
         emailLabel: "Email",
         emailValue: "support.service-platform.rf",
         workingHoursLabel: "Working Hours",
@@ -93,18 +93,18 @@ const translations = {
         userAgreement: "User Agreement",
         publicOffer: "Public Offer",
         legalInfoTitle: "Legal Information",
-        legalEntity: "IP Sosedov Dmitry Igorevich",
-        innLabel: "INN: 524615242985",
-        ogrnLabel: "OGRNIP: 321527500125360",
-        legalAddress: "Legal address: 606440, Nizhny Novgorod region, Bor",
+        legalEntity: "Adambis Services FZE",
+        innLabel: "License: 987654321",
+        ogrnLabel: "Trade License: DXB-TL-2024-001234",
+        legalAddress: "Legal address: Office 405, Business Bay, Dubai, UAE",
 
         // Footer
         footerTagline: "Your reliable assistant in solving household tasks!",
-        footerCopyright: "© 2025 IP Sosedov Dmitry Igorevich. All rights reserved."
+        footerCopyright: "© 2025 Adambis Services FZE. All rights reserved."
     },
     th: {
         // Header
-        siteName: "แพลตฟอร์มบริการ.RF",
+        siteName: "Adambis.com",
         aboutMenu: "เกี่ยวกับ",
         servicesMenu: "บริการ",
         executorMenu: "สำหรับผู้ให้บริการ",
@@ -114,7 +114,7 @@ const translations = {
         // About Section
         aboutTitle: "เกี่ยวกับบริษัท",
         aboutSubtitle: "คำอธิบายบริการ",
-        aboutDescription: '"แพลตฟอร์มบริการ RF" เป็นผู้ช่วยของคุณในการแก้ปัญหาในชีวิตประจำวัน! ค้นหาผู้ให้บริการได้อย่างง่ายดายและรวดเร็ว และผู้ให้บริการสามารถเริ่มทำงานกับเราได้ เชื่อมต่อผ่านบอท Telegram หรือบัญชีส่วนตัวของเราและรับความช่วยเหลือวันนี้!',
+        aboutDescription: '"แพลตฟอร์มบริการ RF" เป็นผู้ช่วยของคุณในการแก้ปัญหาในชีวิตประจำวัน! ค้นหาผู้ให้บริการได้อย่างง่ายดายและรวดเร็ว และผู้ให้บริการสามารถเริ่มทำงานกับเราได้ เชื่อมต่อผ่านบัญชีส่วนตัวของเราและรับความช่วยเหลือวันนี้!',
         clientsCount: "ลูกค้า",
         satisfiedClients: "ลูกค้าที่พึงพอใจ",
         telegramBotBtn: "ไปที่บอท Telegram",
@@ -159,7 +159,7 @@ const translations = {
         executorTitle: "สำหรับผู้ให้บริการ",
         processTitle: "กระบวนการความร่วมมือ",
         step1Title: "ลงทะเบียน",
-        step1Desc: "ไปที่บอท Telegram หรือบัญชีส่วนตัวของเรา",
+        step1Desc: "ไปที่บัญชีส่วนตัวของเรา",
         step2Title: "ตรวจสอบเอกสาร",
         step2Desc: "ทำความคุ้นเคยกับข้อเสนอสาธารณะ ข้อตกลงผู้ใช้ และนโยบายความเป็นส่วนตัว",
         step3Title: "เริ่มทำงาน",
@@ -181,7 +181,7 @@ const translations = {
         contactsTitle: "ติดต่อและเอกสาร",
         contactSubtitle: "ติดต่อเรา",
         addressLabel: "ที่อยู่",
-        addressValue: "606440, ภูมิภาค Nizhny Novgorod, Bor",
+        addressValue: "Office 405, Business Bay, Dubai, UAE",
         emailLabel: "อีเมล",
         emailValue: "support.service-platform.rf",
         workingHoursLabel: "เวลาทำการ",
@@ -195,14 +195,14 @@ const translations = {
         userAgreement: "ข้อตกลงผู้ใช้",
         publicOffer: "ข้อเสนอสาธารณะ",
         legalInfoTitle: "ข้อมูลทางกฎหมาย",
-        legalEntity: "IP Sosedov Dmitry Igorevich",
-        innLabel: "INN: 524615242985",
-        ogrnLabel: "OGRNIP: 321527500125360",
-        legalAddress: "ที่อยู่ทางกฎหมาย: 606440, ภูมิภาค Nizhny Novgorod, Bor",
+        legalEntity: "Adambis Services FZE",
+        innLabel: "License: 987654321",
+        ogrnLabel: "Trade License: DXB-TL-2024-001234",
+        legalAddress: "ที่อยู่ทางกฎหมาย: Office 405, Business Bay, Dubai, UAE",
 
         // Footer
         footerTagline: "ผู้ช่วยที่เชื่อถือได้ของคุณในการแก้ปัญหางานบ้าน!",
-        footerCopyright: "© 2025 IP Sosedov Dmitry Igorevich สงวนลิขสิทธิ์"
+        footerCopyright: "© 2025 Adambis Services FZE สงวนลิขสิทธิ์"
     }
 };
 
