@@ -12,7 +12,7 @@ const translations = {
         // About Section
         aboutTitle: "About Company",
         aboutSubtitle: "Service Description",
-        aboutDescription: '"Service Platform RF" is your assistant in solving everyday tasks! Find an executor easily and quickly, and executors can start working with us. Connect through our personal account and get help today!',
+        aboutDescription: '"Adambis" is your assistant in solving everyday tasks! Find an executor easily and quickly, and executors can start working with us. Connect through our Telegram bot or personal account and get help today!',
         clientsCount: "clients",
         satisfiedClients: "satisfied clients",
         telegramBotBtn: "Go to Telegram Bot",
@@ -114,7 +114,7 @@ const translations = {
         // About Section
         aboutTitle: "เกี่ยวกับบริษัท",
         aboutSubtitle: "คำอธิบายบริการ",
-        aboutDescription: '"แพลตฟอร์มบริการ RF" เป็นผู้ช่วยของคุณในการแก้ปัญหาในชีวิตประจำวัน! ค้นหาผู้ให้บริการได้อย่างง่ายดายและรวดเร็ว และผู้ให้บริการสามารถเริ่มทำงานกับเราได้ เชื่อมต่อผ่านบัญชีส่วนตัวของเราและรับความช่วยเหลือวันนี้!',
+        aboutDescription: '"Adambis" เป็นผู้ช่วยของคุณในการแก้ปัญหาในชีวิตประจำวัน! ค้นหาผู้ให้บริการได้อย่างง่ายดายและรวดเร็ว และผู้ให้บริการสามารถเริ่มทำงานกับเราได้ เชื่อมต่อผ่านบอท Telegram หรือบัญชีส่วนตัวของเราและรับความช่วยเหลือวันนี้!',
         clientsCount: "ลูกค้า",
         satisfiedClients: "ลูกค้าที่พึงพอใจ",
         telegramBotBtn: "ไปที่บอท Telegram",
